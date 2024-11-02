@@ -1,0 +1,21 @@
+body {
+    padding-top: 60px;
+    background-color: rgb(69, 148, 82);
+}
+
+.navbar.fixed-top {
+    box-shadow: 0 2px 4px rgba(225, 61, 36, 0.1);
+    padding: 0px;
+}
+
+.content-section {
+    min-height: 500px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: rgba(192, 55, 34, 0.1);
+    border-radius: 8px;
+}
+
+.toptitle{
+    background-color: red;
+}
