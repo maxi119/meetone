@@ -2,7 +2,7 @@ function ActivtyPage(){
 
 
     return (
-        <div>
+        <div className="container mt-4">
             <h3>
             活動介紹
             </h3>

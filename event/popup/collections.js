@@ -12,7 +12,7 @@ function CollectionBook (){
     const pInfo = getSpecificParam( "person" )
     
     return (
-        <div>
+        <div className="container mt-4">
             <h1>卡片收集冊</h1>
             <p>個人簡介</p>
             {pInfo ? <p>{pInfo}</p> : <p>無</p>}

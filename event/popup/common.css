@@ -1,6 +1,6 @@
 body {
     padding-top: 60px;
-    background-color: rgb(69, 148, 82);
+    background-color: #1733495e;
 }
 
 .navbar.fixed-top {
@@ -17,5 +17,8 @@ body {
 }
 
 .toptitle{
-    background-color: red;
+    background-color: rgb(114 139 141 / 82%);
+    box-shadow: 1px 13px 10px rgb(88 137 136 / 33%);
+    font-size: 30px;
+    font-family: cursive;
 }
