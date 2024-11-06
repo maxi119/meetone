@@ -10,12 +10,25 @@ function CollectionBook (){
     };
 
     const pInfo = getSpecificParam( "person" )
+    let personalCode = 'sdfsdf';
+    // 生成 QR Code 圖片
+    const generateQRCode = () => {
+        const qrCode = document.getElementById("qr-code")
+        let text = personalCode;
+        qrCode.src = `https://api.qrserver.com/v1/create-qr-code/?size=128x128&data=${encodeURIComponent(text)}`;
     
+    };
+    setTimeout(generateQRCode, 1000);
+
     return (
         <div className="container mt-4">
-            <h1>卡片收集冊</h1>
+
+            專屬屬序號 {personalCode}
+            <img id="qr-code" alt="QR Code" />
+            <p/>
             <p>個人簡介</p>
-            {pInfo ? <p>{pInfo}</p> : <p>無</p>}
+            {pInfo ? <p>{pInfo}</p> : <p>輸入個人資訊</p>}
+            掃描上方QR Code 收集好友卡片
             <p>收集到的卡片  0/10</p>
         </div>
     )
