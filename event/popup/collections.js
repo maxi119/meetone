@@ -22,12 +22,13 @@ function CollectionBook (){
 
     return (
         <div className="container mt-4">
-
-            專屬屬序號 {personalCode}
-            <img id="qr-code" alt="QR Code" />
+            <div className="row">
+                <div className="col"> 專屬屬序號</div>
+                <div className=" col"><img id="qr-code" className="qrpreivew" alt="QR Code" /></div>
+            </div>
             <p/>
             <p>個人簡介</p>
-            {pInfo ? <p>{pInfo}</p> : <p>輸入個人資訊</p>}
+            {pInfo ? <p>{pInfo}</p> : <p className="personalinfo_hint">輸入個人資訊, 可在快閃活動中透過簡介來認識別人</p>}
             掃描上方QR Code 收集好友卡片
             <p>收集到的卡片  0/10</p>
         </div>

@@ -1,24 +1,50 @@
 body {
-    padding-top: 60px;
+    padding-top: 60pt;
     background-color: #1733495e;
+    font-size: 2em;
+    background-image: url(/event/popup/images/main_bg.png);
+    background-attachment: fixed;
 }
 
 .navbar.fixed-top {
-    box-shadow: 0 2px 4px rgba(225, 61, 36, 0.1);
-    padding: 0px;
+    box-shadow: 0 2pt 4pt rgba(225, 61, 36, 0.1);
+    padding: 0pt;
 }
 
 .content-section {
-    min-height: 500px;
-    padding: 20px;
-    margin-bottom: 20px;
+    min-height: 500pt;
+    padding: 20pt;
+    margin-bottom: 20pt;
     background-color: rgba(192, 55, 34, 0.1);
-    border-radius: 8px;
+    border-radius: 8pt;
 }
 
 .toptitle{
     background-color: rgb(114 139 141 / 82%);
-    box-shadow: 1px 13px 10px rgb(88 137 136 / 33%);
-    font-size: 30px;
+    box-shadow: 1pt 13pt 10pt rgb(88 137 136 / 33%);
+    font-size: 30pt;
     font-family: cursive;
+}
+
+.mybrand{
+    font-size: 35pt;
+    font-family: cursive;
+    
+}
+
+.qrcontain{
+    width: 128pt;
+    height: 128pt;
+}
+
+.qrpreivew{
+    width: 128pt;
+    height: 128pt;
+}
+
+.personalinfo_hint{
+    font-size: 15pt;
+    font-family: cursive;
+    color: rgb(63, 62, 62);
+    font-weight: 300;
 }
