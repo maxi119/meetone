@@ -74,6 +74,37 @@
                                     </li> )
             }
 
+            const pageContetnt = ()=>{
+               
+                const page = ( elem, bgm )=>{
+                    const bgmfile = `./audio/${bgm ?? 'bg_main.mp3' }`;
+                    return ( <div> {elem} 
+                         <audio src={bgmfile} autoPlay loop>    
+                 <p>If you are reading this, it is because your browser does not support the audio element.     </p>
+                </audio>
+
+                        </div>
+                    )
+                }
+
+
+                if(currentPage === 'home'){
+                    return page(  <HomePage /> )
+                }
+                if(currentPage === 'activity'){
+                    return page (<ActivityPage />, 'bg_event.mp3')
+                }
+                if(currentPage === 'testing'){
+                    return page (<MBTITest />, 'bg_testing.mp3')
+                }
+                if(currentPage === 'collections'){
+                    return page (<CollectionBook />)
+                }
+                if(currentPage === 'about'){
+                    return page(<AboutPage />)
+                }
+            }
+
             return (
                 <div>
                     <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
@@ -105,11 +136,8 @@
                         </div>
                     </nav>
 
-                    {currentPage === 'home' && <HomePage />}
-                    {currentPage === 'about' && <AboutPage />}
-                    {currentPage === 'activity' && <ActivtyPage />}
-                    {currentPage === 'testing' && <MBTITest />}
-                    {currentPage === 'collections' && <CollectionBook />}
+                    {pageContetnt()}
+
                 </div>
             );
         }

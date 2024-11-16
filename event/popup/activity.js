@@ -1,4 +1,4 @@
-function ActivtyPage(){
+function ActivityPage(){
 
 
     return (
