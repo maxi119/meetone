@@ -1,15 +1,43 @@
 function AboutPage() {
     return (
         <div className="container mt-4">
+
             <div className="content-section">
                 <h2>關於我們</h2>
-                <p>这是一个使用 React 和 Bootstrap 构建的示例网站。</p>
+       
+                <div className="jusitfy-content-md-center row">
+                    <div className="aboutfield  col-md-2">平面：</div><div className="col-md-8">Ayden</div>
+                </div>
+                <div className="row">
+                    <div className="aboutfield col-md-2">視覺：</div><div className="col-md-8">Ayden</div>
+                </div>
+
+                <div className="row">
+                    <div className="aboutfield col-md-2">攝影：</div><div className="col-md-8">君羊</div>
+                </div>
+                <div className="row">
+                    <div className="aboutfield col-md-2">文案：</div><div className="col-md-8">13、Ken</div>
+                </div>
+                <div className="row">
+                    <div className="aboutfield col-md-2">音樂：</div><div className="col-md-8">冠融</div>
+                </div>
+                <div className="row">
+                    <div className="aboutfield col-md-2">網頁：</div><div className="col-md-8">Maxi</div>
+                </div>
+
+
             </div>
+
             <div className="content-section">
-                <h3>我们的团队</h3>
-                <p>組長pm: 黃冠廷</p>
-                <p>組員1: 黃冠廷</p>
-                
+                <h2>關於網頁</h2>
+
+                <p>這是一個使用 React 和 Bootstrap 建立的網頁。</p>
+                <p>使用 react 程 bootstrap 但不經過 babel 編譯，直接使用 import 引入。</p>
+                <p>使用上有一些限制，例如無法使用 JSX 語法，但可以使用 React 的函式式組件。</p>
+                <p>這樣可以在不 clone 下直接線上編輯 </p>
+                <p>所有資訊皆無遠端存放，這是一個可以離線使用的網頁。</p>
+                <p>版權為本人所有，請勿商業使用。</p>
+                <p>如有問題，請聯絡：maxi.chang@gmail.com</p>
             </div>
         </div>
     );

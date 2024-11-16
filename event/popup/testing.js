@@ -137,7 +137,7 @@ const MBTITest = () => {
       <div className="container py-5">
         <div className="row justify-content-center">
           <div className="col-md-8">
-            <div className="card">
+            <div className="card testing">
               <div className="card-body">
                 <h1 className="card-title text-center mb-4">
                   MBTI 人格測試
@@ -145,7 +145,7 @@ const MBTITest = () => {
                 
                 <div className="progress mb-4" style={{height: "10px"}}>
                   <div 
-                    className="progress-bar progress-bar-striped progress-bar-animated"
+                    className="progress-bar testing progress-bar-striped progress-bar-animated"
                     role="progressbar"
                     style={{width: `${progress}%`}}
                     aria-valuenow={progress}
@@ -160,9 +160,9 @@ const MBTITest = () => {
                 
                 <div className="d-grid gap-3">
                   {questions[currentQuestion].answers.map((answer, index) => (
-                    <button
+                    <button 
                       key={index}
-                      className="btn btn-outline-primary text-start"
+                      className="btn testing btn-outline-primary text-start"
                       onClick={() => handleAnswer(answer.type)}
                     >
                       {answer.text}

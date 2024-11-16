@@ -22,15 +22,31 @@ function CollectionBook (){
 
     return (
         <div className="container mt-4">
+            <p>我的卡片</p>
             <div className="row">
-                <div className="col"> 專屬屬序號</div>
-                <div className=" col"><img id="qr-code" className="qrpreivew" alt="QR Code" /></div>
+                <div className="col">
+                    <div className="row">
+                        <div className="col">
+                        <p>個人簡介</p>
+                            </div>
+                        <div className="row">
+
+                        {pInfo ? <p>{pInfo}</p> : <p className="personalinfo_hint col">輸入個人資訊, 可在快閃活動中透過簡介來認識別人</p>}
+                        </div>
+                    </div>
+                </div>
+                <div className="col"><img id="qr-code" className="qrpreivew" alt="QR Code" /></div>
             </div>
             <p/>
-            <p>個人簡介</p>
-            {pInfo ? <p>{pInfo}</p> : <p className="personalinfo_hint">輸入個人資訊, 可在快閃活動中透過簡介來認識別人</p>}
+            <div className="col"> <p className="personalinfo_hint">透過掃瞄 QR 來收集其它人的卡片</p></div>
+      
             掃描上方QR Code 收集好友卡片
-            <p>收集到的卡片  0/10</p>
+            <p>收集到的卡片  1/10</p>
+            <div className="row">
+                <div className="col-md-1 coll_book_no">1</div>
+                <div className="col-md-4 coll_book_title">萬華劉得華</div>
+                <div className="col-md-2 coll_book_item">JSTP</div>
+            </div>
         </div>
     )
 }

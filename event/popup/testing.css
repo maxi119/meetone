@@ -1,0 +1,13 @@
+.card.testing{
+    background-color: rgb(85 85 31 / 36%)
+}
+
+.progress-bar.testing{
+    background-color: #293443;
+}
+
+.btn.testing{
+    color: #135053;
+    border-color: #135053;
+    --bs-btn-hover-bg: #298e92;
+}
