@@ -6,23 +6,23 @@ function AboutPage() {
                 <h2>關於我們</h2>
        
                 <div className="jusitfy-content-md-center row">
-                    <div className="aboutfield  col-md-2">平面：</div><div className="col-md-8">Ayden</div>
+                    <div className="aboutfield  col-md-3">平面：</div><div className="col-md-8">Ayden</div>
                 </div>
                 <div className="row">
-                    <div className="aboutfield col-md-2">視覺：</div><div className="col-md-8">Ayden</div>
+                    <div className="aboutfield col-md-3">視覺：</div><div className="col-md-8">Ayden</div>
                 </div>
 
                 <div className="row">
-                    <div className="aboutfield col-md-2">攝影：</div><div className="col-md-8">君羊</div>
+                    <div className="aboutfield col-md-3">攝影：</div><div className="col-md-8">君羊</div>
                 </div>
                 <div className="row">
-                    <div className="aboutfield col-md-2">文案：</div><div className="col-md-8">13、Ken</div>
+                    <div className="aboutfield col-md-3">文案：</div><div className="col-md-8">13、Ken</div>
                 </div>
                 <div className="row">
-                    <div className="aboutfield col-md-2">音樂：</div><div className="col-md-8">冠融</div>
+                    <div className="aboutfield col-md-3">音樂：</div><div className="col-md-8">冠融</div>
                 </div>
                 <div className="row">
-                    <div className="aboutfield col-md-2">網頁：</div><div className="col-md-8">Maxi</div>
+                    <div className="aboutfield col-md-3">網頁：</div><div className="col-md-8">Maxi</div>
                 </div>
 
 
