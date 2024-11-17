@@ -25,7 +25,7 @@ function CollectionBook (){
         personCode = _uuid();
         localStorage.setItem("personalCode", personCode);
     }
-    let personName = localStorage.getItem("personName") ?? '訪客';
+    let personName = localStorage.getItem("personName") ?? '';
     let mbti = localStorage.getItem("mbtiResult") ?? '';
 
     let personInfo = {
@@ -44,7 +44,7 @@ function CollectionBook (){
                         <p>{idx}</p>
                     </div>
                     <div className="col-md-4 coll_book_title">
-                        <p>{friend.title}</p>
+                        <p>{friend.title ?? '訪客'}</p>
                     </div>
                     <div className="col-md-2 coll_book_item">
                         <p>{friend.mbti}</p>
@@ -86,16 +86,35 @@ function CollectionBook (){
     }
 
     addOther();
-    let personalCode =  JSON.stringify(personInfo);
     // 生成 QR Code 圖片
     const generateQRCode = () => {
+        let personalCode =  JSON.stringify(personInfo);
         const qrCode = document.getElementById("qr-code")
         let text = `https://${window.location.host}/meetone/event/popup/index.html?person=${personalCode}`;
         qrCode.src = `https://api.qrserver.com/v1/create-qr-code/?size=128x128&data=${encodeURIComponent(text)}`;
     
     };
-    setTimeout(generateQRCode, 1000);
+    setTimeout(generateQRCode, 500);
+    
+    let tdebounce = 0;
+    let [intro, setIntro ] = React.useState(personInfo.name ?? '');
+    function titleChanged(e){
+        let introV = e.target.value;
+        // console.log('onchange',e);
+        // personInfo.intro = introV;
+        // let jss = JSON.stringify(personInfo);
+        clearTimeout(tdebounce);
+        tdebounce = setTimeout(()=>{
+            personInfo.name = introV;
+            // console.log('creating qr', personInfo);
+            generateQRCode();
+        }, 2000);
+        localStorage.setItem('personName', introV);
+        setIntro(introV);
+        // console.log( 'afeterset', intro, e.target.value )
+    }
 
+    // let intro = personInfo.name ?? '';
     return (
         <div className="container md-4">
             <div className="card collections">
@@ -109,7 +128,9 @@ function CollectionBook (){
                                 </div>
                             <div className="row">
 
-                             <p className="personalinfo col">輸入個人資訊, 可在快閃活動中透過簡介來認識別人</p>
+                             {/* <p className="personalinfo col">輸入個人資訊, 可在快閃活動中透過簡介來認識別人</p> */}
+                             <input type='text' className="personalinfo col"  onChange={(e)=>{titleChanged(e)}} value={intro} placeholder="輸入個人資訊, 可在快閃活動中透過簡介來認識別人" />
+
                             </div>
                         </div>
                     </div>
