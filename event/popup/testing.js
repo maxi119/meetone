@@ -102,7 +102,7 @@ const MBTITest = () => {
         <div className="container py-5">
           <div className="row justify-content-center">
             <div className="col-md-8">
-              <div className="card">
+              <div className="card testing">
                 <div className="card-body">
                   <h1 className="card-title text-center mb-4">
                     您的 MBTI 類型是：{type}
@@ -111,7 +111,7 @@ const MBTITest = () => {
                     {getTypeDescription(type)}
                   </p>
                   <button 
-                    className="btn btn-primary w-100"
+                    className="btn btn-primary testing w-100"
                     onClick={() => {
                       localStorage.setItem('mbtiResult', '');
                       setCurrentQuestion(0);

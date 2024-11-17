@@ -21,3 +21,37 @@
     text-align: left;
     margin-bottom: 10px;
 }
+
+.card.collections{
+  
+    background-color: rgba(192, 55, 34, 0.1);
+    padding: 20pt;
+    align-content: center;
+    margin: 10pt 10pt 20pt 20pt;
+}
+
+.card.collectbook{
+  
+    background-color: rgba(41, 199, 117, 0.1);
+    padding: 20pt;
+    align-content: center;
+    margin: 10pt 10pt 20pt 20pt;
+}
+
+.collectbook.title2{
+    font-size: 18pt;
+    color: rgb(56, 56, 56);
+}
+
+.personalinfo {
+    border: 2px solid #55535367;
+    border-radius: 10px;
+    width: 100%;
+    height: 5rem;
+    font-size: 14pt;
+}
+
+.personalinfo_hint {
+    width: 100%;
+    font-size: 14pt;
+}

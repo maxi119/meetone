@@ -62,14 +62,17 @@ body {
     height: 128pt;
 }
 
-.qrpreivew{
-    width: 128pt;
-    height: 128pt;
+
+.canva-image{
+    width: 100%;
 }
 
-.personalinfo_hint{
-    font-size: 15pt;
-    font-family: cursive;
-    color: rgb(63, 62, 62);
-    font-weight: 300;
+hr.present {
+    border: 0;
+    height: 0; /* Firefox... */
+    box-shadow: 0 0 10px 5px black;
+}
+
+hr.present:after {  /* Not really supposed to work, but does */
+    content: "\00a0";  /* Prevent margin collapse */
 }

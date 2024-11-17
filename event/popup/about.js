@@ -6,10 +6,10 @@ function AboutPage() {
                 <h2>關於我們</h2>
        
                 <div className="jusitfy-content-md-center row">
-                    <div className="aboutfield  col-md-3">平面：</div><div className="col-md-8">Ayden</div>
+                    <div className="aboutfield  col-md-3">平面：</div><div className="col-md-8">君羊、Ayden</div>
                 </div>
                 <div className="row">
-                    <div className="aboutfield col-md-3">視覺：</div><div className="col-md-8">Ayden</div>
+                    <div className="aboutfield col-md-3">視覺：</div><div className="col-md-8">13、Ken、Ayden</div>
                 </div>
 
                 <div className="row">

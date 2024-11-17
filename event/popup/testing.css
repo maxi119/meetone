@@ -11,3 +11,8 @@
     border-color: #135053;
     --bs-btn-hover-bg: #298e92;
 }
+
+.btn-primary.testing{
+    background-color: #135053;
+    color: white;
+}

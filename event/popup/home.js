@@ -1,36 +1,13 @@
 function HomePage() {
     return (
         <div className="container mt-4">
-            <div className="content-section">
-                <h2>剩單不孤單</h2>
-                <p>讓聖誕節的你/妳再也不孤單</p>
+            <div className="content-section ">
+                <img className="canva-image" src="./present/1.png"></img>
+                <hr className="present"/>
+                <img className="canva-image" src="./present/5.png"></img>
             </div>
-            <div className="content-section">
-                <h3>現代人單身的原因</h3>
-                <pre>過於被動
-                    忘不掉前一任
-                    單身萬歲
-                    害怕邁出超越友情的第一步
-                    曾經有過不好的回憶
-                    身邊太多失敗的案例
-                    期望太高/條件過多
-                    找到伴侶並非目前生活的重心
-                    身體本能的不想(潛意識)
-                    選擇障礙
-                    </pre>
-            </div>
-            <div className="content-section">
-                <h3>專案研究與目標</h3>
-                <p>
-                互聯網發達的現代，認識異性的方式相較過去理應多元，尤其交友軟體更為盛行，但在交友軟體內，個人資訊的真實性都是有待求證的，對於真心想要交友的，往往都會被有心人士利用。
-
-為此，此次活動就是已現實多人娛樂為主的交友活動，提供一個公開的環境給想要交友的各位當面互動，並幫忙保護個人資訊，也會篩選部分有風險的人士，將參加的人員風險降到最低。
-
-主要以配對成功為前提，配對未成功的也有與異性交談、互動的過程，給予參與下次活動一個值得的經驗。
-
-                </p>
-
-            </div>
+          
+           
         </div>
     );
 }
