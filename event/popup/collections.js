@@ -1,4 +1,16 @@
 
+function _uuid() {
+    var d = Date.now();
+    if (typeof performance !== 'undefined' && typeof performance.now === 'function'){
+      d += performance.now(); //use high-precision timer if available
+    }
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+      var r = (d + Math.random() * 16) % 16 | 0;
+      d = Math.floor(d / 16);
+        return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
+    });
+}
+
 function CollectionBook (){
 
     const maxMenCount = 10;
@@ -8,13 +20,77 @@ function CollectionBook (){
         const urlParams = new URLSearchParams(window.location.search);
         return urlParams.get(paramName);
     };
+    let personCode = localStorage.getItem("personalCode");
+    if( personCode === null ){
+        personCode = _uuid();
+        localStorage.setItem("personalCode", personCode);
+    }
+    let personName = localStorage.getItem("personName") ?? '訪客';
+    let mbti = localStorage.getItem("mbtiResult") ?? '';
 
-    const pInfo = getSpecificParam( "person" )
-    let personalCode = 'sdfsdf';
+    let personInfo = {
+        uid : personCode,
+        name: personName,
+        mbti: mbti,
+    }
+    let friendList = localStorage.getItem('collect_book')??"[]";
+    friendList = JSON.parse(friendList);
+
+    function friendContnet(){
+        function friendItem(friend, idx){
+            return(
+                <div className="row friend">    
+                    <div className="col-md-1 coll_book_no">
+                        <p>{idx}</p>
+                    </div>
+                    <div className="col-md-4 coll_book_title">
+                        <p>{friend.title}</p>
+                    </div>
+                    <div className="col-md-2 coll_book_item">
+                        <p>{friend.mbti}</p>
+                    </div>
+        
+                </div>
+            )
+        }
+        let ret = [];
+        for( let i = 0; i < friendList.length; i++ ){
+            ret.push(friendItem(friendList[i], i +2));
+        }
+        return ret;
+    }
+
+    function addOther(){
+        const otherJson = getSpecificParam( "person" );
+        console.log('get data', otherJson);
+        if( otherJson !== null ){
+            const otherInfo = JSON.parse(otherJson);
+            let existInfo = false;
+            for( let i = 0; i < friendList.length; i++ ){
+                if( friendList[i].uid === otherInfo.uid ){
+                    existInfo = friendList[i];
+                    break;
+                 }
+            }
+            console.log( "friendList", friendList );
+            if( existInfo === false ){
+                friendList.push(otherInfo);
+            }else{
+                existInfo.title = otherInfo.title;
+                existInfo.mbti = otherInfo.mbti;
+            }
+            let jss = JSON.stringify(friendList);
+            localStorage.setItem('collect_book', jss);
+            // window.location.href = `/meetone/event/popup/collection_book.html`;
+        }
+    }
+
+    addOther();
+    let personalCode =  JSON.stringify(personInfo);
     // 生成 QR Code 圖片
     const generateQRCode = () => {
         const qrCode = document.getElementById("qr-code")
-        let text = personalCode;
+        let text = `https://${window.location.host}/meetone/event/popup/index.html?person=${personalCode}`;
         qrCode.src = `https://api.qrserver.com/v1/create-qr-code/?size=128x128&data=${encodeURIComponent(text)}`;
     
     };
@@ -33,7 +109,7 @@ function CollectionBook (){
                                 </div>
                             <div className="row">
 
-                            {pInfo ? <p>{pInfo}</p> : <p className="personalinfo col">輸入個人資訊, 可在快閃活動中透過簡介來認識別人</p>}
+                             <p className="personalinfo col">輸入個人資訊, 可在快閃活動中透過簡介來認識別人</p>
                             </div>
                         </div>
                     </div>
@@ -46,12 +122,13 @@ function CollectionBook (){
             <div className="card collectbook">
 
                 掃描上方QR Code 收集好友卡片
-                <p className="collectbook title2">收集到的卡片  1/10</p>
-                <div className="row">
+                <p className="collectbook title2">收集到的卡片  {friendList.length+1}/10</p>
+                <div className="row friend">
                     <div className="col-md-1 coll_book_no">1</div>
                     <div className="col-md-4 coll_book_title">萬華劉得華</div>
                     <div className="col-md-2 coll_book_item">JSTP</div>
                 </div>
+                {friendContnet()}
             </div>
         </div>
     )
