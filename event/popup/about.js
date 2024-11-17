@@ -31,13 +31,13 @@ function AboutPage() {
             <div className="content-section">
                 <h2>關於網頁</h2>
 
-                <p>這是一個使用 React 和 Bootstrap 建立的網頁。</p>
-                <p>使用 react 程 bootstrap 但不經過 babel 編譯，直接使用 import 引入。</p>
-                <p>使用上有一些限制，例如無法使用 JSX 語法，但可以使用 React 的函式式組件。</p>
-                <p>這樣可以在不 clone 下直接線上編輯 </p>
-                <p>所有資訊皆無遠端存放，這是一個可以離線使用的網頁。</p>
-                <p>版權為本人所有，請勿商業使用。</p>
-                <p>如有問題，請聯絡：maxi.chang@gmail.com</p>
+                <p className="txt">這是一個使用 React 和 Bootstrap 建立的網頁。</p>
+                <p className="txt">使用 react 程 bootstrap 但不經過 babel 編譯，直接使用 import 引入。</p>
+                <p className="txt">使用上有一些限制，例如無法使用 JSX 語法，但可以使用 React 的函式式組件。</p>
+                <p className="txt">這樣可以在不 clone 下直接線上編輯 </p>
+                <p className="txt">所有資訊皆無遠端存放，這是一個可以離線使用的網頁。</p>
+                <p className="txt">版權為本人所有，請勿商業使用。</p>
+                <p className="txt">如有問題，請聯絡：maxi.chang@gmail.com</p>
             </div>
         </div>
     );
