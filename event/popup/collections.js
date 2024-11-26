@@ -30,7 +30,7 @@ function CollectionBook (){
 
     let personInfo = {
         uid : personCode,
-        name: personName,
+        title: personName,
         mbti: mbti,
     }
     let friendList = localStorage.getItem('collect_book')??"[]";
@@ -78,6 +78,7 @@ function CollectionBook (){
             }else{
                 existInfo.title = otherInfo.title;
                 existInfo.mbti = otherInfo.mbti;
+                
             }
             let jss = JSON.stringify(friendList);
             localStorage.setItem('collect_book', jss);
