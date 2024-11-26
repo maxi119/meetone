@@ -1,8 +1,8 @@
 function AboutPage() {
     return (
-        <div className="container mt-4">
+        <div className="container-lg">
 
-            <div className="content-section">
+            <div className="content-section about">
                 <h2>關於我們</h2>
        
                 <div className="jusitfy-content-md-center row">
@@ -28,7 +28,7 @@ function AboutPage() {
 
             </div>
 
-            <div className="content-section">
+            <div className="content-section about">
                 <h2>關於網頁</h2>
 
                 <p className="txt">這是一個使用 React 和 Bootstrap 建立的網頁。</p>

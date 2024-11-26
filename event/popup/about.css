@@ -8,3 +8,7 @@ p.txt{
     font-size: 14pt;
     color: rgb(32, 32, 32);
 }
+
+.content-section.about{
+    margin: 20pt;
+}
