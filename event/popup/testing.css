@@ -8,13 +8,40 @@
 }
 
 .btn.testing{
-    color: #135053;
-    border-color: #135053;
-    --bs-btn-hover-bg: #298e92;
-    --bs-btn-active-bg: #298e92;
+    color: #7c7c7c;
+    font-size: 1.5rem;
+    border-color: #5c5c5c;
+    --bs-btn-hover-bg: none; 
+    --bs-btn-active-bg: none; 
+
+}
+
+.btn.testing:hover{
+    background-color: none;
 }
 
 .btn-primary.testing{
     background-color: #135053;
     color: white;
+    font-size: 2rem;
+}
+
+.lead.testing{
+    font-size: 2rem;
+    color: white;
+}
+
+.question.testing{
+    font-size: 2rem;
+    color: white;
+}
+
+.card-title.testing{
+    font-size: 3rem;
+    color: #c8bcbc;
+}
+
+.text-center.testing-progress{
+    font-size: 1.5rem;
+    color: rgb(124, 125, 123);
 }

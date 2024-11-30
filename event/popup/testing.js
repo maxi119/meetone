@@ -104,10 +104,10 @@ const MBTITest = () => {
             <div className="col-md-10">
               <div className="card testing">
                 <div className="card-body">
-                  <h1 className="card-title text-center mb-4">
+                  <h1 className="card-title testing text-center mb-4">
                     您的 MBTI 類型是：{type}
                   </h1>
-                  <p className="lead mb-4">
+                  <p className="lead testing mb-4">
                     {getTypeDescription(type)}
                   </p>
                   <button 
@@ -139,7 +139,7 @@ const MBTITest = () => {
           <div className="col-md-10">
             <div className="card testing">
               <div className="card-body">
-                <h1 className="card-title text-center mb-4">
+                <h1 className="card-title testing text-center mb-4">
                   MBTI 人格測試
                 </h1>
                 
@@ -154,7 +154,7 @@ const MBTITest = () => {
                   ></div>
                 </div>
   
-                <h5 className="mb-4">
+                <h5 className="question testing mb-4">
                   {questions[currentQuestion].text}
                 </h5>
                 
@@ -170,7 +170,7 @@ const MBTITest = () => {
                   ))}
                 </div>
   
-                <div className="mt-4 text-center text-muted">
+                <div className="mt-4 text-center testing-progress ">
                   問題 {currentQuestion + 1} / {questions.length}
                 </div>
               </div>

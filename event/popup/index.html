@@ -31,7 +31,7 @@
     <script src="collections.js" type="text/babel"></script>
     <script src="qrcode.js" type="text/babel"></script>
 </head>
-<body>
+<body class="main">
     <div id="qr"></div>
     <div id="root"></div>
 
@@ -65,7 +65,7 @@
             const menuItem = (displayName, pageName )=>{
                 return ( <li className="nav-item">
                                         <a 
-                                            className={`nav-link ${currentPage === pageName ? 'active' : ''}`} 
+                                            className={`nav-link ${currentPage === pageName ? 'activeMain' : ''}`} 
                                             href="#"
                                             onClick={(e) => handleNavigation(pageName, e)}
                                         >
@@ -107,11 +107,11 @@
 
             return (
                 <div>
-                    <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+                    <nav className="navbar navbar-expand-lg navbar-light fixed-top">
                         <div className="container-fluid toptitle">
                             <a className="navbar-brand mybrand" href="#">剩單不孤單</a>
                             <button 
-                                className="navbar-toggler" 
+                                className="navbar-toggler main" 
                                 type="button" 
                                 data-bs-toggle="collapse" 
                                 data-bs-target="#navbarNav"
@@ -124,7 +124,7 @@
                                 id="navbarNav"
                                 ref={navbarCollapseRef}
                             >
-                                <ul className="navbar-nav">
+                                <ul className="navbar-nav main">
                                     {menuItem("首頁", "home")}
                                     {menuItem("活動", "activity")}
                                     {menuItem("小測驗", "testing")}

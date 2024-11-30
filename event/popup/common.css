@@ -1,12 +1,22 @@
 
 @font-face {
-    font-family: "王漢宗特黑體繁";
+    font-family: "扁桃體";
     src: url(./font/wang-han.ttf) format("truetype");
+}
+
+
+@font-face {
+    font-family: "扁桃體";
+    src: url(./font/bsbt.ttf) format("truetype");
+}
+
+body.main{
+    background-color: #072623;
 }
 
 body {
     padding-top: 60pt;
-    background-color: #FFF7E3;
+    background-color: #072623;
     font-size: 3em;
     background-image: url(./image/main_bg.png);
     background-position: 0% 0%;
@@ -14,8 +24,9 @@ body {
 }
 
 .navbar.fixed-top {
-    box-shadow: 0 2pt 4pt rgba(225, 61, 36, 0.1);
+    box-shadow: 0 2pt 4pt rgba(27, 55, 34, 0.301);
     padding: 0pt;
+    background-color: #161A2A;
 }
 
 .content-section {
@@ -26,10 +37,6 @@ body {
     border-radius: 8pt;
 }
 
-.nav-link.active{
-    font-size: 2.5rem;
-    color: white;
-}
 
 .nav-item {
     align-content: center;
@@ -37,24 +44,36 @@ body {
 
 .nav-link{
     font-size: 2rem;
-    font-family: 王漢宗特黑體繁;
+    font-family: 扁桃體;
+    color: #00898f;
     /* color: #135053;  */
-
+    padding-left: 3rem;
+    letter-spacing: 5pt;
 }
 
 
+.nav-link.activeMain{
+    font-size: 2.5rem;
+    color: #0a58ca;
+}
+
+.navbar-nav.main{
+    --bs-nav-link-hover-color: #195ec6;
+}
+
 .toptitle{
-    background-color: rgba(179, 133, 114, 0.82);
-    box-shadow: 1pt 13pt 10pt rgb(88 137 136 / 33%);
+    background-color: #18172cd1;
+    box-shadow: 1pt 13pt 10pt rgba(17, 50, 49, 0.33);
     font-size: 3rem;
-    font-family: 王漢宗特黑體繁;
+    font-family: 扁桃體;
     color: #135053;
 }
 
 .mybrand{
     font-size: 35pt;
-    font-family: 王漢宗特黑體繁;
-    color: #135053;
+    font-family: 扁桃體;
+    color: #862223;
+    --bs-navbar-brand-hover-color: #893f3f;
 }
 
 .qrcontain{
@@ -75,4 +94,8 @@ hr.present {
 
 hr.present:after {  /* Not really supposed to work, but does */
     content: "\00a0";  /* Prevent margin collapse */
+}
+
+.navbar-toggler.main{
+    background-color: #561111;
 }
