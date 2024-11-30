@@ -1,6 +1,6 @@
 function HomePage() {
     return (
-        <div className="container mt-4">
+        <div className="container-lg mt-4">
             <div className="content-section ">
                 <img className="canva-image" src="./present/1.png"></img>
                 <hr className="present"/>

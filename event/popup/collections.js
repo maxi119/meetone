@@ -117,14 +117,14 @@ function CollectionBook (){
 
     // let intro = personInfo.name ?? '';
     return (
-        <div className="container md-4">
+        <div className="container-lg md-4">
             <div className="card collections">
 
-                <p>我的卡片</p>
+                <p className="coll-title">我的卡片</p>
                 <div className="row">
                     <div className="col">
                         <div className="row">
-                            <div className="col">
+                            <div className="col person-intro">
                             <p>個人簡介</p>
                                 </div>
                             <div className="row">

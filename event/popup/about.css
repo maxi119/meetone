@@ -5,10 +5,14 @@
 }
 
 p.txt{
-    font-size: 14pt;
-    color: rgb(32, 32, 32);
+    font-size: 2rem;
+    color: rgb(182, 182, 182);
 }
 
 .content-section.about{
     margin: 20pt;
+}
+
+.mname{
+    color: gray;
 }
