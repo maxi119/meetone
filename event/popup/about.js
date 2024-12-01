@@ -1,7 +1,7 @@
 function AboutPage() {
     return (
         <div className="container-lg">
-
+<img className="canva-image" src="./present/14.png"></img>
             <div className="content-section about">
                 <h2>關於我們</h2>
        
