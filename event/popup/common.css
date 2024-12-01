@@ -82,6 +82,10 @@ body {
     margin-left: 0;
     padding-top: 15pt;
     padding-bottom: 5pt ;
+    padding-left: 10pt;
+    padding-right: 10pt;
+    border-radius: 0 0 30pt 0;
+
 }
 
 .qrcontain{
