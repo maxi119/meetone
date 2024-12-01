@@ -148,7 +148,7 @@ function CollectionBook (){
                 <div className="row friend">
                     <div className="col-md-1 coll_book_no">1</div>
                     <div className="col-md-4 coll_book_title">萬華劉得華</div>
-                    <div className="col-md-2 coll_book_item">JSTP</div>
+                    <div className="col-md-2 coll_book_item">ESTP</div>
                 </div>
                 {friendContnet()}
             </div>
