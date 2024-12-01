@@ -20,12 +20,14 @@
 
     <link rel="stylesheet" href="common.css">
     <link rel="stylesheet" href="activity.css">
+    <link rel="stylesheet" href="activity-detail.css">
     <link rel="stylesheet" href="about.css">
     <link rel="stylesheet" href="collections.css">
     <link rel="stylesheet" href="testing.css">
     <link rel="stylesheet" href="home.css">
     <script src="home.js" type="text/babel"></script>
     <script src="activity.js" type="text/babel"></script>
+    <script src="activity-detail.js" type="text/babel"></script>
     <script src="about.js" type="text/babel"></script>
     <script src="testing.js" type="text/babel"></script>
     <script src="collections.js" type="text/babel"></script>
@@ -100,6 +102,9 @@
                 if(currentPage === 'collections'){
                     return page (<CollectionBook />)
                 }
+                if(currentPage === 'activity-detail'){
+                    return page (<ActivityDetailPage />)
+                }                
                 if(currentPage === 'about'){
                     return page(<AboutPage />)
                 }
@@ -108,8 +113,8 @@
             return (
                 <div>
                     <nav className="navbar navbar-expand-lg navbar-light fixed-top">
-                        <div className="container-fluid toptitle">
-                            <a className="navbar-brand mybrand" href="#">剩單不孤單</a>
+                        <div className="container-fluid toptitle brand-background">
+                            <img className="navbar-brand mybrand" src="./image/brand.png" />
                             <button 
                                 className="navbar-toggler main" 
                                 type="button" 
@@ -126,7 +131,8 @@
                             >
                                 <ul className="navbar-nav main">
                                     {menuItem("首頁", "home")}
-                                    {menuItem("活動", "activity")}
+                                    {menuItem("活動行程", "activity")}
+                                    {menuItem("活動內容", "activity-detail")}
                                     {menuItem("小測驗", "testing")}
                                     {menuItem("收集小卡", "collections")}
                                     {menuItem("關於我們", "about")}

@@ -1,0 +1,11 @@
+
+
+.brand-background1 {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 250px;
+    height: 250px;
+    background-color: #e0e0e0;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 100%);
+  }

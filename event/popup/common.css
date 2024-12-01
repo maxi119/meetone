@@ -26,7 +26,7 @@ body {
 .navbar.fixed-top {
     box-shadow: 0 2pt 4pt rgba(27, 55, 34, 0.301);
     padding: 0pt;
-    background-color: #161A2A;
+    background-color: white;
 }
 
 .content-section {
@@ -45,7 +45,7 @@ body {
 .nav-link{
     font-size: 2rem;
     font-family: 扁桃體;
-    color: #00898f;
+    color: #093831;
     /* color: #135053;  */
     padding-left: 3rem;
     letter-spacing: 5pt;
@@ -54,19 +54,21 @@ body {
 
 .nav-link.activeMain{
     font-size: 2.5rem;
-    color: #0a58ca;
+    color: #893F3F;
 }
 
 .navbar-nav.main{
-    --bs-nav-link-hover-color: #195ec6;
+    --bs-nav-link-hover-color: #893F3F;
 }
 
 .toptitle{
-    background-color: #18172cd1;
+    background-color: unset;
     box-shadow: 1pt 13pt 10pt rgba(17, 50, 49, 0.33);
     font-size: 3rem;
     font-family: 扁桃體;
     color: #135053;
+    margin-left: 0;
+    padding-left: 0px;
 }
 
 .mybrand{
@@ -74,6 +76,12 @@ body {
     font-family: 扁桃體;
     color: #862223;
     --bs-navbar-brand-hover-color: #893f3f;
+    width: 200pt;
+    height: 60pt;
+    background-color: #093831;
+    margin-left: 0;
+    padding-top: 15pt;
+    padding-bottom: 5pt ;
 }
 
 .qrcontain{
